@@ -27,7 +27,7 @@ Projet Data IA 2024 - Greta Centre Val de Loire/Simplonline - SpamClassifier
  deactivate 
 ```
 
-Déactivation de l'environnement virtuel (si besoin) sous Windows
+## Déactivation de l'environnement virtuel (si besoin) sous Windows
 ```shell
   deactivate
 ```
