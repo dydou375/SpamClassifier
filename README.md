@@ -22,14 +22,9 @@ Projet Data IA 2024 - Greta Centre Val de Loire/Simplonline - SpamClassifier
   pip freeze
 ```
 
-## Déactivation de l'environnement virtuel (si besoin) sous Linux
-```bash
- deactivate 
+## Déactivation de l'environnement virtuel
 ```
-
-## Déactivation de l'environnement virtuel (si besoin) sous Windows
-```shell
-  deactivate
+ deactivate 
 ```
 
 ## Lancer l'application Streamlit
