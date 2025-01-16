@@ -1,6 +1,7 @@
 # SpamClassifier
 Projet Data IA 2024 - Greta Centre Val de Loire/Simplonline - SpamClassifier
 
+#### Le Dataset SpamClasifier provient du site suivant : https://archive.ics.uci.edu/dataset/228/sms+spam+collection
 ## Creation de l'environnement virtuel sous Linux
 ```bash
     # Création environnement virtuel & activation
