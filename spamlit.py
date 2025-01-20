@@ -46,7 +46,7 @@ def prediction_spam(message_saisi):
     # Transformer le message en DataFrame
     df_message = transformer_message_en_dataframe(message_saisi)
     # Charger le modèle
-    model = joblib.load('model4.joblib')
+    model = joblib.load('model_svc.joblib')
     resultat = model.predict(df_message)
     return resultat[0]
 
