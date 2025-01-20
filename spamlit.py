@@ -62,6 +62,7 @@ else:
     prediction = prediction_spam(message)
     st.write(prediction)
 
+## test pour savoir si le modèle fonctionne
 spam = "Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question(std txt rate)T&C's apply 08452810075over18's"
 ham = "Hey, I'm just checking in to see if you've received my last message. How are you doing?"
 print(prediction_spam(spam))
