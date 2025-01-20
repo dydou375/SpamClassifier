@@ -29,7 +29,7 @@ Projet Data IA 2024 - Greta Centre Val de Loire/Simplonline - SpamClassifier
 
 ## Lancer l'application Streamlit
 ```shell
-  streamlit run streamlit_app.py
+  streamlit run spamlit.py
 ```
 ## Dataset
 *Le Dataset SpamClasifier provient du site suivant : https://archive.ics.uci.edu/dataset/228/sms+spam+collection*
