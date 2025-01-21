@@ -17,27 +17,23 @@ def presence_redondance(text):
     redondance = re.findall(r'[^a-zA-Z0-9\s!"(),-.:;?]', text)
     return len(redondance)
     
-#fonction qui traite le dataframe en améliorant le dataframe
+# Fonction qui traite le dataframe en ajoutant les colonnes nécessaires
 def ajouter_colonnes_message(df):
-    #ajout de la colonne longueur_message
+    # Ajout de la colonne longueur_message
     df['longueur_message'] = df['Contenu'].apply(len)
-    #ajout de la colonne caracspec_sms
-    df['caracspec_sms'] = df['Contenu'].apply(caracspec) 
-    #ajout de la colonne nombre_mots 
-    df['nombre_mots'] = df['Contenu'].apply(lambda x: len(x.split()))
-    #ajout de la colonne liste_mots
-    df["liste_mots"] = df['Contenu'].apply(lambda x: x.split())
-    #ajout de la colonne Tot_chiffres
+    # Ajout de la colonne caracspec_sms
+    df['caracspec_sms'] = df['Contenu'].apply(caracspec)
+    # Ajout de la colonne Tot_chiffres
     df['Tot_chiffres'] = df['Contenu'].apply(compter_chiffres)
-    #ajout de la colonne redondance_spam
+    # Ajout de la colonne redondance_spam
     df['redondance_spam'] = df['Contenu'].apply(presence_redondance)
 
     return df[["longueur_message", "caracspec_sms", "Tot_chiffres", "redondance_spam"]]
 
 def transformer_message_en_dataframe(message):
     # Créer un DataFrame avec le message
-    df_message = pd.DataFrame({'type_message': ['unknown'], 'Contenu': [message]})
-    # Appliquer les mêmes transformations que sur le DataFrame d'origine
+    df_message = pd.DataFrame({'Contenu': [message]})
+    # Appliquer les transformations pour obtenir les colonnes nécessaires
     df_message = ajouter_colonnes_message(df_message)
     return df_message
 
